@@ -25,7 +25,7 @@ const TabForm = () => {
     name: "Yatharth",
     age: 18,
     email: "yatharth@example.com",
-    interests: ["coding", "gaming"],
+    interests: [],
     theme: "dark" 
   })
 
