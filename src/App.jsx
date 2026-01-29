@@ -1,5 +1,5 @@
-import React from 'react'
 import TabForm from './components/TabForm'
+import "./index.css"
 
 const App = () => {
   return (
