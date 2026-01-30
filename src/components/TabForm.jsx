@@ -26,10 +26,14 @@ const TabForm = () => {
     age: 18,
     email: "yatharth@example.com",
     interests: [],
-    theme: "" 
+    theme: ""
   })
 
   const ActiveTabComponent = tabs[activeTab].component
+
+  const getUserData = () => {
+    console.log(userData)
+  }
 
   return (
     <>
@@ -49,6 +53,9 @@ const TabForm = () => {
       <div className='current-tab'>
         <ActiveTabComponent data={userData} setData={setUserData} />
       </div>
+      {activeTab > 0 && <button onClick={() => setActiveTab(activeTab-1)}>prev</button>}
+      {activeTab < tabs.length - 1 && <button onClick={() => setActiveTab(activeTab+1)}>next</button>}
+      {activeTab === tabs.length - 1 && <button onClick={getUserData}>Submit</button>}
     </>
   )
 }

@@ -22,7 +22,7 @@ const ProfileTab = ({ data, setData }) => {
           placeholder='Enter your name' />
       </div>
       <div>
-        <label htmlFor="age">Name : </label>
+        <label htmlFor="age">Age : </label>
         <input
           type="number"
           id='age'

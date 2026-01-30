@@ -9,7 +9,6 @@ const SettingsTab = ({ data, setData }) => {
       }
     ))
   }
-  console.log(data.theme)
   return (
     <div>
       <div>
