@@ -8,7 +8,6 @@ const InterestsTab = ({ data, setData }) => {
       }
     ))
   }
-  console.log(data)
   return (
     <div>
       <div>

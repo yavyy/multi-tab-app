@@ -26,7 +26,7 @@ const TabForm = () => {
     age: 18,
     email: "yatharth@example.com",
     interests: [],
-    theme: "dark" 
+    theme: "" 
   })
 
   const ActiveTabComponent = tabs[activeTab].component

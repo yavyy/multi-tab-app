@@ -1,8 +1,42 @@
 import React from 'react'
 
-const SettingsTab = () => {
+const SettingsTab = ({ data, setData }) => {
+  const handleThemeChange = (e) => {
+    setData(prevData => (
+      {
+        ...prevData,
+        theme: e.target.value
+      }
+    ))
+  }
+  console.log(data.theme)
   return (
-    <div>SettingsTab</div>
+    <div>
+      <div>
+        <label>
+          <input
+            type="radio"
+            value={"dark"}
+            name='theme'
+            checked={data.theme === "dark"}
+            onChange={(e) => handleThemeChange(e)}
+          />
+          Dark
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="radio"
+            value={"light"}
+            name='theme'
+            checked={data.theme === "light"}
+            onChange={(e) => handleThemeChange(e)}
+          />
+          Light
+        </label>
+      </div>
+    </div>
   )
 }
 
