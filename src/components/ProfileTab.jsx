@@ -10,7 +10,6 @@ const ProfileTab = ({ data, setData }) => {
       }
     ))
   }
-  console.log(data)
   return (
     <div className='form-container'>
       <div>
