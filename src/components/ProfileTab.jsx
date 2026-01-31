@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProfileTab = ({ data, setData }) => {
+const ProfileTab = ({ data, setData, error }) => {
   const { name, age, email } = data;
   function handleUserProfileChange(e, item) {
     setData(prev => (
@@ -20,6 +20,7 @@ const ProfileTab = ({ data, setData }) => {
           value={name}
           onChange={(e) => handleUserProfileChange(e, "name")}
           placeholder='Enter your name' />
+        {error.name && <span className='error'>{error.name}</span>}
       </div>
       <div>
         <label htmlFor="age">Age : </label>
@@ -30,6 +31,7 @@ const ProfileTab = ({ data, setData }) => {
           onChange={(e) => handleUserProfileChange(e, "age")}
           min={9}
           max={45} />
+        {error.age && <span className='error'>{error.age}</span>}
       </div>
       <div>
         <label htmlFor="email">Email : </label>
@@ -39,6 +41,7 @@ const ProfileTab = ({ data, setData }) => {
           value={email}
           onChange={(e) => handleUserProfileChange(e, "email")}
           placeholder='john@example.com' />
+        {error.email && <span className='error'>{error.email}</span>}
       </div>
     </div>
   )
